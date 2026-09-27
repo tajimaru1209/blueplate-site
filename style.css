@@ -1,0 +1,52 @@
+:root {
+  --bg: #0C1420;
+  --surface: #152033;
+  --surface2: #1C2A42;
+  --text: #FFFFFF;
+  --soft: #8C97AB;
+  --accent: #8DB0EC;
+  --on-accent: #0C1420;
+  --line: rgba(255, 255, 255, 0.08);
+}
+* { box-sizing: border-box; }
+html { scroll-behavior: smooth; }
+body {
+  margin: 0;
+  background: radial-gradient(1200px 600px at 50% -200px, #1A2A44, var(--bg)) fixed, var(--bg);
+  color: var(--text);
+  font-family: -apple-system, BlinkMacSystemFont, "Segoe UI", system-ui, sans-serif;
+  font-size: 17px;
+  line-height: 1.6;
+}
+.wrap { max-width: 720px; margin: 0 auto; padding: 40px 16px 64px; }
+a { color: var(--accent); font-weight: 600; text-underline-offset: 3px; }
+.hero { display: flex; align-items: center; gap: 18px; }
+.hero img { width: 84px; height: 84px; border-radius: 20px; box-shadow: 0 8px 24px rgba(0,0,0,.5); }
+.eyebrow { font-size: 12px; font-weight: 700; letter-spacing: 3px; text-transform: uppercase; color: var(--accent); }
+h1 { font-size: 40px; line-height: 1.1; margin: 4px 0 0; letter-spacing: -0.5px; }
+h2 { font-size: 26px; margin: 44px 0 12px; letter-spacing: -0.3px; }
+h3 { font-size: 19px; margin: 26px 0 8px; }
+.lead { font-size: 19px; color: var(--soft); margin: 18px 0 0; }
+.badges { display: flex; flex-wrap: wrap; gap: 8px; margin-top: 18px; }
+.badges span { font-size: 14px; font-weight: 600; color: var(--text); background: var(--surface); border: 1px solid var(--line); border-radius: 999px; padding: 4px 12px; }
+.jump { margin-top: 16px; color: var(--soft); }
+.card { background: var(--surface); border: 1px solid var(--line); border-radius: 16px; padding: 16px 20px; margin: 14px 0 20px; }
+.card p { margin: 0; }
+.label { font-size: 12px; font-weight: 700; letter-spacing: 1.5px; text-transform: uppercase; color: var(--accent); }
+.value { font-size: 19px; font-weight: 600; word-break: break-all; }
+ol.steps { list-style: none; padding: 0; margin: 0; counter-reset: s; }
+ol.steps li {
+  counter-increment: s; position: relative; padding: 14px 16px 14px 60px; margin-bottom: 12px;
+  background: var(--surface); border: 1px solid var(--line); border-radius: 16px;
+}
+ol.steps li::before {
+  content: counter(s); position: absolute; left: 16px; top: 14px; width: 30px; height: 30px; border-radius: 50%;
+  display: grid; place-items: center; background: var(--accent); color: var(--on-accent); font-weight: 700; font-size: 15px;
+}
+.faq p { margin: 0 0 18px; }
+.updated { color: var(--soft); margin-top: 6px; }
+#privacy { margin-top: 56px; padding-top: 8px; border-top: 1px solid var(--line); }
+footer { margin-top: 48px; padding-top: 18px; border-top: 1px solid var(--line); color: var(--soft); font-size: 15px; }
+footer p { margin: 4px 0; }
+@media (max-width: 480px) { h1 { font-size: 32px; } .hero img { width: 68px; height: 68px; } }
+h1, h2 { font-family: "New York", "Iowan Old Style", Georgia, serif; font-weight: 600; }
